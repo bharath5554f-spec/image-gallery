@@ -1,2 +1,2 @@
-"# image-gallery" 
-"# image-gallery" 
+"# image-gallery"
+"# photo" 
