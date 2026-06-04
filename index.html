@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Technology Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <div class="brand-block">
+        <span class="eyebrow">Technology Portfolio</span>
+        <h1>Technology Image Gallery</h1>
+        <p class="subtitle">A modern showcase of AI, Robotics, Cyber Security, Cloud, and Web Development.</p>
+      </div>
+      <div class="header-actions">
+        <div class="search-wrapper">
+          <label for="searchInput" class="visually-hidden">Search images by title</label>
+          <input id="searchInput" type="search" placeholder="Search by title..." autocomplete="off" />
+          <span class="search-icon">🔍</span>
+        </div>
+        <button id="themeToggle" class="mode-toggle" type="button" aria-label="Toggle dark and light mode">
+          <span class="toggle-icon">🌙</span>
+          <span>Dark Mode</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="toolbar">
+      <div class="toolbar-left">
+        <p class="summary-text">Showing <span id="displayedCount">0</span> images</p>
+      </div>
+      <div class="filter-group" role="tablist" aria-label="Category filters">
+        <button class="filter-button active" data-category="All" type="button">All <span class="filter-count" id="count-all">(0)</span></button>
+        <button class="filter-button" data-category="Artificial Intelligence" type="button">Artificial Intelligence <span class="filter-count" id="count-artificial-intelligence">(0)</span></button>
+        <button class="filter-button" data-category="Robotics" type="button">Robotics <span class="filter-count" id="count-robotics">(0)</span></button>
+        <button class="filter-button" data-category="Cyber Security" type="button">Cyber Security <span class="filter-count" id="count-cyber-security">(0)</span></button>
+        <button class="filter-button" data-category="Cloud Computing" type="button">Cloud Computing <span class="filter-count" id="count-cloud-computing">(0)</span></button>
+        <button class="filter-button" data-category="Web Development" type="button">Web Development <span class="filter-count" id="count-web-development">(0)</span></button>
+      </div>
+    </section>
+
+    <main class="gallery-grid" id="galleryGrid" aria-live="polite"></main>
+
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Back to top">↑</button>
+
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+      <div class="lightbox-panel" role="dialog" aria-modal="true" aria-label="Image preview">
+        <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close preview">✕</button>
+        <div class="lightbox-content">
+          <button class="lightbox-nav prev" id="lightboxPrev" type="button" aria-label="Previous image">←</button>
+          <div class="lightbox-image-frame">
+            <img id="lightboxImage" src="" alt="" />
+            <div class="lightbox-meta">
+              <span id="lightboxCategory" class="lightbox-category"></span>
+              <h2 id="lightboxTitle"></h2>
+            </div>
+          </div>
+          <button class="lightbox-nav next" id="lightboxNext" type="button" aria-label="Next image">→</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="loading-overlay" id="loadingOverlay">
+      <div class="loader"></div>
+      <p>Loading technology gallery...</p>
+    </div>
+
+    <footer class="page-footer">
+      <p>Built with HTML, CSS, and Vanilla JavaScript. Explore technology imagery with advanced filtering and favorites.</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
